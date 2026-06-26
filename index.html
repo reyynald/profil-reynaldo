@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reynaldo Dwi Septano Baru — Profil Mahasiswa</title>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://reyynald.github.io/profil-reynaldo/#person",
+      "name": "Reynaldo Dwi Septano Baru",
+      "givenName": "Reynaldo",
+      "familyName": "Baru",
+      "additionalName": "Dwi Septano",
+      "identifier": "F1G123053",
+      "email": "rseptanobaru@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. H.E.A. Mokodompit, Kec. Kambu",
+        "addressLocality": "Kendari",
+        "addressRegion": "Sulawesi Tenggara",
+        "postalCode": "93232",
+        "addressCountry": "ID"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "SMA Negeri 4 Kendari",
+          "address": { "@type": "PostalAddress", "addressLocality": "Kendari", "addressCountry": "ID" }
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Universitas Halu Oleo",
+          "alternateName": "UHO",
+          "url": "https://uho.ac.id"
+        },
+        {
+          "@type": "Organization",
+          "name": "Valorant Esports Team Kendari",
+          "description": "Tim esport Valorant yang aktif berkompetisi di turnamen lokal dan regional."
+        },
+        {
+          "@type": "Organization",
+          "name": "Forex Traders Community Kendari",
+          "description": "Komunitas trader forex yang rutin melakukan analisis pasar dan edukasi keuangan."
+        }
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "S1 Ilmu Komputer",
+        "recognizedBy": { "@id": "https://uho.ac.id/#organization" }
+      },
+      "knowsAbout": [
+        { "@type": "DefinedTerm", "name": "HTML" },
+        { "@type": "DefinedTerm", "name": "CSS" },
+        { "@type": "DefinedTerm", "name": "JavaScript" },
+        { "@type": "DefinedTerm", "name": "Python" },
+        { "@type": "DefinedTerm", "name": "Microsoft Office" }
+      ]
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "@id": "https://uho.ac.id/#organization",
+      "name": "Universitas Halu Oleo",
+      "alternateName": "UHO",
+      "url": "https://uho.ac.id",
+      "sameAs": "https://www.wikidata.org/wiki/Q12511643",
+      "address": { "@type": "PostalAddress", "streetAddress": "Jl. H.E.A. Mokodompit", "addressLocality": "Kendari", "addressRegion": "Sulawesi Tenggara", "postalCode": "93232", "addressCountry": "ID" },
+      "department": { "@type": "EducationalOrganization", "name": "Program Studi Ilmu Komputer", "description": "Program studi jenjang S1 yang mempelajari ilmu komputer, pemrograman, dan teknologi informasi.", "url": "https://uho.ac.id" }
+    }
+  ]
+}
+</script>
+
+<!-- ===== FONTS ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+  :root{
+    --void:#05060A;
+    --panel:#0B0E16;
+    --panel2:#101526;
+    --line:rgba(124,133,151,0.18);
+    --line-strong:rgba(124,133,151,0.32);
+    --ink:#E7EBF5;
+    --ash:#8A93A6;
+    --cyan:#00F0FF;
+    --magenta:#FF2E9A;
+    --lime:#9CFF2E;
+    --cyan-dim:rgba(0,240,255,0.12);
+    --magenta-dim:rgba(255,46,154,0.12);
+    --lime-dim:rgba(156,255,46,0.12);
+    --font-display:'Chakra Petch',sans-serif;
+    --font-body:'Inter',sans-serif;
+    --font-mono:'JetBrains Mono',monospace;
+  }
+
+  html[data-theme="light"]{
+    --void:#EEF1F8;
+    --panel:#FFFFFF;
+    --panel2:#F4F6FB;
+    --line:rgba(20,24,40,0.12);
+    --line-strong:rgba(20,24,40,0.22);
+    --ink:#0C0E1A;
+    --ash:#565F75;
+    --cyan:#00A7B8;
+    --magenta:#D6258A;
+    --lime:#4E9A12;
+    --cyan-dim:rgba(0,167,184,0.10);
+    --magenta-dim:rgba(214,37,138,0.10);
+    --lime-dim:rgba(78,154,18,0.10);
+  }
+
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--void);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:15px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    transition:background .35s ease, color .35s ease;
+    overflow-x:hidden;
+  }
+
+  /* scanline + noise atmosphere */
+  body::before{
+    content:'';
+    position:fixed; inset:0; z-index:9999;
+    pointer-events:none;
+    background:repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.018) 0px,
+      rgba(255,255,255,0.018) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    opacity:.5;
+    mix-blend-mode:overlay;
+  }
+  html[data-theme="light"] body::before{ opacity:.15; }
+
+  ::selection{ background:var(--cyan); color:#000; }
+
+  a{ color:inherit; }
+
+  /* ===== SCROLL REVEAL ===== */
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.visible{ opacity:1; transform:none; }
+
+  /* ===== NAV ===== */
+  nav{
+    position:sticky; top:0; z-index:200;
+    height:64px;
+    background:color-mix(in srgb, var(--void) 78%, transparent);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+    display:flex; align-items:center;
+    padding:0 max(5%,24px);
+    gap:28px;
+  }
+  .nav-logo{
+    font-family:var(--font-display);
+    font-size:14px; font-weight:700;
+    letter-spacing:.04em;
+    display:flex; align-items:center; gap:10px;
+    white-space:nowrap;
+  }
+  .nav-logo-mark{
+    width:30px; height:30px;
+    border:1px solid var(--cyan);
+    border-radius:4px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono); font-size:13px; font-weight:700;
+    color:var(--cyan);
+    box-shadow:0 0 14px var(--cyan-dim), inset 0 0 8px var(--cyan-dim);
+    flex-shrink:0;
+  }
+  .nav-tag{ color:var(--ash); font-weight:500; font-family:var(--font-mono); font-size:11px; }
+  .nav-links{ display:flex; gap:26px; list-style:none; margin-left:auto; }
+  .nav-links a{
+    font-family:var(--font-mono);
+    font-size:12px; font-weight:500;
+    letter-spacing:.03em;
+    color:var(--ash);
+    text-decoration:none;
+    text-transform:uppercase;
+    position:relative;
+    transition:color .15s;
+  }
+  .nav-links a::before{ content:'/'; color:var(--line-strong); margin-right:6px; }
+  .nav-links a:hover{ color:var(--cyan); }
+
+  .theme-toggle{
+    display:flex; align-items:center; gap:6px;
+    background:var(--panel2);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:4px;
+    cursor:pointer;
+    flex-shrink:0;
+  }
+  .theme-toggle button{
+    appearance:none; border:none; background:transparent;
+    width:30px; height:26px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:16px;
+    color:var(--ash);
+    cursor:pointer;
+    transition:background .2s, color .2s;
+  }
+  .theme-toggle button svg{ width:14px; height:14px; }
+  .theme-toggle button.active{
+    background:var(--cyan);
+    color:#000;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex; align-items:center;
+    overflow:hidden;
+    padding:90px max(5%,24px) 60px;
+  }
+  #hero-canvas{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    z-index:0;
+  }
+  .hero-veil{
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, color-mix(in srgb, var(--void) 10%, transparent) 0%, color-mix(in srgb, var(--void) 55%, transparent) 65%, var(--void) 100%);
+    pointer-events:none;
+  }
+  .hero-floor-grid{
+    position:absolute; inset:0; z-index:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:42px 42px;
+    -webkit-mask-image:radial-gradient(circle at 50% 30%, black 0%, transparent 70%);
+    mask-image:radial-gradient(circle at 50% 30%, black 0%, transparent 70%);
+    opacity:.5;
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative; z-index:2;
+    max-width:1080px; margin:0 auto; width:100%;
+  }
+  .hero-layout{
+    display:grid;
+    grid-template-columns: 1.18fr 0.82fr;
+    gap:56px;
+    align-items:center;
+  }
+
+  /* ===== PROFILE SCAN FRAME ===== */
+  .hero-photo{ display:flex; flex-direction:column; align-items:center; gap:14px; }
+  .scan-tag{
+    display:flex; align-items:center; gap:7px; width:100%; max-width:280px;
+    font-family:var(--font-mono); font-size:10px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ash);
+  }
+  .scan-tag .dot{ width:6px; height:6px; border-radius:50%; }
+  .scan-tag .dot.c{ background:var(--cyan); box-shadow:0 0 6px var(--cyan); }
+  .scan-tag .dot.m{ background:var(--magenta); box-shadow:0 0 6px var(--magenta); }
+  .scan-tag .dot.l{ background:var(--lime); box-shadow:0 0 6px var(--lime); }
+  .scan-tag span.lbl{ margin-left:auto; }
+
+  .scan-frame{
+    position:relative;
+    width:100%; max-width:280px;
+    aspect-ratio: 3/4;
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid var(--line-strong);
+    background:var(--panel);
+    box-shadow:0 0 0 1px var(--cyan-dim), 0 10px 50px rgba(0,240,255,0.10);
+  }
+  .scan-frame img{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center 18%;
+    display:block;
+    filter:contrast(1.06) saturate(1.04);
+  }
+  .scan-frame .wash{
+    position:absolute; inset:0;
+    background:linear-gradient(165deg, rgba(0,240,255,0.16) 0%, transparent 38%, rgba(255,46,154,0.12) 100%);
+    mix-blend-mode:overlay;
+    pointer-events:none;
+  }
+  .scan-frame .grain{
+    position:absolute; inset:0;
+    background-image:repeating-linear-gradient(to bottom, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 3px);
+    opacity:.35;
+    pointer-events:none;
+  }
+  .scan-line{
+    position:absolute; left:4%; right:4%; height:2px;
+    background:linear-gradient(90deg, transparent, var(--cyan), transparent);
+    box-shadow:0 0 10px var(--cyan);
+    animation: scanMove 3.4s ease-in-out infinite;
+    pointer-events:none;
+  }
+  @keyframes scanMove{
+    0%,100%{ top:6%; opacity:.9; }
+    50%{ top:92%; opacity:.45; }
+  }
+  .corner{ position:absolute; width:20px; height:20px; pointer-events:none; transition:width .2s,height .2s; }
+  .corner.tl{ top:6px; left:6px; border-top:2px solid var(--cyan); border-left:2px solid var(--cyan); }
+  .corner.tr{ top:6px; right:6px; border-top:2px solid var(--cyan); border-right:2px solid var(--cyan); }
+  .corner.bl{ bottom:6px; left:6px; border-bottom:2px solid var(--cyan); border-left:2px solid var(--cyan); }
+  .corner.br{ bottom:6px; right:6px; border-bottom:2px solid var(--cyan); border-right:2px solid var(--cyan); }
+  .scan-frame:hover .corner{ width:26px; height:26px; }
+
+  .scan-caption{
+    display:flex; align-items:center; justify-content:space-between;
+    width:100%; max-width:280px;
+    font-family:var(--font-mono); font-size:10.5px; letter-spacing:.05em;
+    color:var(--ash); text-transform:uppercase;
+  }
+  .scan-caption .ok{ display:flex; align-items:center; gap:6px; color:var(--lime); }
+  .scan-caption .ok .dot{ width:6px; height:6px; border-radius:50%; background:var(--lime); box-shadow:0 0 6px var(--lime); }
+
+  @media (max-width:860px){
+    .hero-layout{ grid-template-columns:1fr; gap:38px; }
+    .hero-photo{ order:-1; }
+    .scan-frame, .scan-tag, .scan-caption{ max-width:220px; }
+  }
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-mono);
+    font-size:11px; font-weight:600; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--cyan);
+    border:1px solid var(--line-strong);
+    background:var(--cyan-dim);
+    padding:6px 14px; border-radius:3px;
+    margin-bottom:30px;
+  }
+  .hero-eyebrow::before{
+    content:''; width:7px; height:7px; border-radius:50%;
+    background:var(--cyan);
+    box-shadow:0 0 8px var(--cyan);
+    animation:blink 1.6s ease-in-out infinite;
+  }
+  @keyframes blink{ 0%,100%{opacity:1;} 50%{opacity:.25;} }
+
+  .hero h1{
+    font-family:var(--font-display);
+    font-size:clamp(38px,7vw,76px);
+    font-weight:700;
+    line-height:1.02;
+    letter-spacing:-0.01em;
+    text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  .hero h1 .ln1{ display:block; color:var(--ink); }
+  .hero h1 .ln2{
+    display:block;
+    color:var(--cyan);
+    text-shadow:0 0 18px var(--cyan-dim), 0 0 38px var(--cyan-dim);
+  }
+  .glitch{ position:relative; display:inline-block; }
+  .glitch.glitching::before, .glitch.glitching::after{
+    content:attr(data-text);
+    position:absolute; left:0; top:0; width:100%;
+    overflow:hidden;
+  }
+  .glitch.glitching::before{ color:var(--magenta); animation:glitchTop .42s steps(2,end) 1; clip-path:inset(0 0 55% 0); transform:translate(-2px,-1px); }
+  .glitch.glitching::after{ color:var(--lime); animation:glitchBot .42s steps(2,end) 1; clip-path:inset(55% 0 0 0); transform:translate(2px,1px); }
+  @keyframes glitchTop{ 0%{transform:translate(-2px,-1px);} 50%{transform:translate(3px,1px);} 100%{transform:translate(0,0);} }
+  @keyframes glitchBot{ 0%{transform:translate(2px,1px);} 50%{transform:translate(-3px,-1px);} 100%{transform:translate(0,0);} }
+
+  .hero-id{
+    font-family:var(--font-mono);
+    font-size:13.5px; color:var(--ash);
+    margin-bottom:34px;
+  }
+  .hero-id .sep{ color:var(--line-strong); margin:0 10px; }
+  .hero-id .val{ color:var(--lime); }
+
+  .hero-stats{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:42px; }
+  .hero-stat{
+    display:flex; align-items:center; gap:9px;
+    background:color-mix(in srgb, var(--panel) 80%, transparent);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:10px 15px;
+    font-size:12.5px; font-weight:500;
+    font-family:var(--font-mono);
+    color:var(--ink);
+    backdrop-filter:blur(6px);
+  }
+  .hero-stat svg{ width:14px; height:14px; color:var(--cyan); flex-shrink:0; }
+
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .btn-primary{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--cyan); color:#02151A;
+    font-family:var(--font-mono);
+    font-size:13px; font-weight:700; letter-spacing:.04em;
+    text-transform:uppercase;
+    padding:13px 24px; border-radius:3px;
+    text-decoration:none;
+    box-shadow:0 0 24px var(--cyan-dim);
+    transition:transform .15s, box-shadow .15s;
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 4px 30px var(--cyan-dim); }
+  .btn-ghost{
+    display:inline-flex; align-items:center; gap:8px;
+    border:1px solid var(--line-strong);
+    color:var(--ink);
+    font-family:var(--font-mono);
+    font-size:13px; font-weight:600; letter-spacing:.03em;
+    text-transform:uppercase;
+    padding:13px 22px; border-radius:3px;
+    text-decoration:none;
+    transition:border-color .15s, color .15s;
+  }
+  .btn-ghost:hover{ border-color:var(--magenta); color:var(--magenta); }
+
+  .hero-hud{
+    position:absolute; z-index:2;
+    font-family:var(--font-mono); font-size:10.5px;
+    color:var(--ash); letter-spacing:.05em;
+    pointer-events:none;
+    display:none;
+  }
+  .hero-hud.tl{ top:90px; left:max(5%,24px); }
+  .hero-hud.br{ bottom:30px; right:max(5%,24px); text-align:right; }
+  .hero-hud .dim{ color:var(--line-strong); }
+
+  @media (min-width:860px){ .hero-hud{ display:block; } }
+
+  /* ===== MAIN / SECTIONS ===== */
+  main{ max-width:880px; margin:0 auto; padding:0 max(5%,24px) 120px; position:relative; z-index:1; background:var(--void); }
+  section{ margin-top:96px; }
+
+  .sec-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:30px; }
+  .sec-num{
+    font-family:var(--font-mono); font-size:12px; font-weight:700;
+    color:var(--magenta); letter-spacing:.05em;
+  }
+  .sec-title{
+    font-family:var(--font-display);
+    font-size:22px; font-weight:700;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+  .sec-line{ flex:1; height:1px; background:linear-gradient(90deg,var(--line-strong) 0%, transparent 100%); }
+
+  /* ===== PANEL (cyberpunk card) ===== */
+  .panel{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:30px;
+    position:relative;
+    transition:border-color .25s, box-shadow .25s;
+  }
+  .panel::before{
+    content:''; position:absolute; left:14px; right:14px; top:0; height:1px;
+    background:linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity:.5;
+  }
+  .panel-bar{
+    display:flex; align-items:center; gap:8px;
+    margin:-30px -30px 22px -30px;
+    padding:10px 16px;
+    border-bottom:1px solid var(--line);
+    font-family:var(--font-mono); font-size:10.5px; color:var(--ash);
+    letter-spacing:.06em;
+  }
+  .panel-bar .dot{ width:8px; height:8px; border-radius:50%; }
+  .panel-bar .dot.c{ background:var(--cyan); }
+  .panel-bar .dot.m{ background:var(--magenta); }
+  .panel-bar .dot.l{ background:var(--lime); }
+  .panel-bar .pb-label{ margin-left:auto; text-transform:uppercase; }
+  .panel:hover{ border-color:var(--line-strong); box-shadow:0 0 32px rgba(0,240,255,0.06); }
+
+  /* ===== IDENTITY GRID ===== */
+  .id-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:4px; overflow:hidden; }
+  .id-item{ background:var(--panel); padding:16px 18px; position:relative; }
+  .id-item .lbl{ font-family:var(--font-mono); font-size:10px; font-weight:600; letter-spacing:.09em; text-transform:uppercase; color:var(--ash); margin-bottom:6px; }
+  .id-item .val{ font-size:14.5px; font-weight:600; color:var(--ink); line-height:1.3; }
+  .id-item .val.mono{ font-family:var(--font-mono); font-size:13px; color:var(--cyan); }
+
+  /* ===== TIMELINE ===== */
+  .edu-timeline{ position:relative; padding-left:30px; }
+  .edu-timeline::before{ content:''; position:absolute; left:7px; top:8px; bottom:8px; width:1px; background:linear-gradient(180deg,var(--cyan) 0%, var(--magenta) 100%); }
+  .edu-entry{ position:relative; margin-bottom:34px; }
+  .edu-entry:last-child{ margin-bottom:0; }
+  .edu-dot{ position:absolute; left:-30px; top:6px; width:15px; height:15px; background:var(--panel); border:2px solid var(--cyan); border-radius:50%; }
+  .edu-dot.active{ background:var(--cyan); box-shadow:0 0 0 5px var(--cyan-dim), 0 0 14px var(--cyan); }
+  .edu-period{ font-family:var(--font-mono); font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--cyan); margin-bottom:5px; }
+  .edu-name{ font-family:var(--font-display); font-size:17px; font-weight:700; color:var(--ink); margin-bottom:3px; text-transform:uppercase; letter-spacing:.01em; }
+  .edu-detail{ font-size:13.5px; color:var(--ash); margin-bottom:9px; }
+  .edu-tag{ display:inline-block; font-family:var(--font-mono); font-size:10.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:4px 12px; border-radius:3px; border:1px solid; }
+  .edu-tag.current{ background:var(--lime-dim); color:var(--lime); border-color:var(--lime); }
+  .edu-tag.grad{ background:var(--cyan-dim); color:var(--cyan); border-color:var(--cyan); }
+
+  /* ===== SKILL ===== */
+  .skill-group{ margin-bottom:26px; }
+  .skill-group:last-child{ margin-bottom:0; }
+  .skill-group-title{ font-family:var(--font-mono); font-size:11px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--ash); margin-bottom:16px; }
+  .skill-bars{ display:flex; flex-direction:column; gap:14px; }
+  .skill-bar-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:7px; }
+  .skill-bar-name{ font-size:13.5px; font-weight:600; color:var(--ink); }
+  .skill-bar-pct{ font-family:var(--font-mono); font-size:12px; font-weight:600; color:var(--ash); }
+  .skill-bar-track{ height:7px; background:var(--panel2); border-radius:2px; overflow:hidden; border:1px solid var(--line); }
+  .skill-bar-fill{ height:100%; width:0%; background:linear-gradient(90deg,var(--cyan),var(--cyan)); box-shadow:0 0 10px var(--cyan-dim); transition:width 1.1s cubic-bezier(.16,1,.3,1); }
+  .skill-bar-fill.magenta{ background:linear-gradient(90deg,var(--magenta),var(--magenta)); box-shadow:0 0 10px var(--magenta-dim); }
+  .skill-bar-fill.lime{ background:linear-gradient(90deg,var(--lime),var(--lime)); box-shadow:0 0 10px var(--lime-dim); }
+
+  /* ===== ORG GRID ===== */
+  .org-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
+  .org-card{ background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:24px; position:relative; overflow:hidden; transition:border-color .2s, transform .2s; }
+  .org-card:hover{ transform:translateY(-3px); }
+  .org-card.esport:hover{ border-color:var(--magenta); box-shadow:0 8px 30px var(--magenta-dim); }
+  .org-card.trading:hover{ border-color:var(--lime); box-shadow:0 8px 30px var(--lime-dim); }
+  .org-icon-wrap{ width:44px; height:44px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:20px; margin-bottom:16px; border:1px solid; }
+  .org-icon-wrap.esport{ background:var(--magenta-dim); border-color:var(--magenta); }
+  .org-icon-wrap.trading{ background:var(--lime-dim); border-color:var(--lime); }
+  .org-badge{ display:inline-block; font-family:var(--font-mono); font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.07em; padding:3px 10px; border-radius:3px; margin-bottom:10px; }
+  .org-badge.esport{ background:var(--magenta-dim); color:var(--magenta); }
+  .org-badge.trading{ background:var(--lime-dim); color:var(--lime); }
+  .org-name{ font-family:var(--font-display); font-size:15px; font-weight:700; color:var(--ink); margin-bottom:5px; line-height:1.3; text-transform:uppercase; }
+  .org-role{ font-family:var(--font-mono); font-size:12px; font-weight:600; margin-bottom:12px; }
+  .org-card.esport .org-role{ color:var(--magenta); }
+  .org-card.trading .org-role{ color:var(--lime); }
+  .org-desc{ font-size:12.5px; color:var(--ash); line-height:1.65; }
+
+  /* ===== SEMANTIC ===== */
+  .sem-box{ background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:32px; }
+  .sem-box-title{ font-family:var(--font-mono); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ash); margin-bottom:22px; }
+  .triple-list{ display:flex; flex-direction:column; gap:8px; margin-bottom:30px; }
+  .triple{ display:grid; grid-template-columns:1fr .7fr 1fr; background:var(--panel2); border:1px solid var(--line); border-radius:4px; overflow:hidden; font-size:13px; font-family:var(--font-mono); }
+  .t-sub{ padding:11px 14px; color:var(--cyan); font-weight:600; }
+  .t-pre{ padding:11px 14px; color:var(--ash); font-style:italic; border-left:1px solid var(--line); border-right:1px solid var(--line); text-align:center; }
+  .t-obj{ padding:11px 14px; color:var(--magenta); font-weight:600; }
+
+  .code-block{ background:#000; border:1px solid var(--line); border-radius:5px; overflow:hidden; }
+  html[data-theme="light"] .code-block{ background:#0C0E1A; }
+  .code-bar{ display:flex; align-items:center; gap:6px; padding:10px 14px; border-bottom:1px solid var(--line); background:rgba(255,255,255,.02); }
+  .code-bar .dot{ width:10px; height:10px; border-radius:50%; }
+  .code-bar .dot:nth-child(1){ background:var(--magenta); }
+  .code-bar .dot:nth-child(2){ background:var(--lime); }
+  .code-bar .dot:nth-child(3){ background:var(--cyan); }
+  .code-bar span{ margin-left:auto; font-size:11px; color:var(--ash); font-family:var(--font-mono); }
+  pre{ font-family:var(--font-mono); font-size:12px; line-height:1.85; padding:20px; color:#A1A1AA; margin:0; overflow-x:auto; }
+  .j-key{ color:#7DD3FC; } .j-str{ color:#86EFAC; } .j-type{ color:#F0ABFC; } .j-url{ color:#FDE68A; } .j-punc{ color:#52525B; }
+
+  /* ===== FOOTER ===== */
+  footer{ border-top:1px solid var(--line); padding:42px max(5%,24px); display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; position:relative; z-index:1; background:var(--void); }
+  .footer-left{ font-size:13px; color:var(--ash); }
+  .footer-left strong{ color:var(--ink); font-weight:600; }
+  .footer-links{ display:flex; gap:18px; }
+  .footer-links a{ font-family:var(--font-mono); font-size:12px; font-weight:500; color:var(--ash); text-decoration:none; transition:color .15s; }
+  .footer-links a:hover{ color:var(--cyan); }
+  .footer-schema{ font-family:var(--font-mono); font-size:11px; color:var(--line-strong); width:100%; }
+
+  /* ===== BOOT OVERLAY ===== */
+  #boot{
+    position:fixed; inset:0; z-index:9998;
+    background:var(--void);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono); color:var(--cyan); font-size:13px;
+    transition:opacity .5s ease;
+  }
+  #boot pre{ padding:0; color:var(--cyan); font-size:12.5px; line-height:1.7; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:640px){
+    .nav-links{ display:none; }
+    .nav-tag{ display:none; }
+    .hero h1{ font-size:42px; }
+    .id-grid{ grid-template-columns:1fr; }
+    .triple{ grid-template-columns:1fr; }
+    .t-pre{ border-left:none; border-right:none; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ transition:none; }
+    .glitch.glitching::before, .glitch.glitching::after{ animation:none; display:none; }
+  }
+</style>
+</head>
+<body data-boot="pending">
+
+<div id="boot">
+  <pre id="boot-text"></pre>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-mark">R</div>
+    REYNALDO.SYS
+  </div>
+  <span class="nav-tag">F1G123053</span>
+  <ul class="nav-links">
+    <li><a href="#identitas">Identitas</a></li>
+    <li><a href="#pendidikan">Edukasi</a></li>
+    <li><a href="#skill">Skill</a></li>
+    <li><a href="#organisasi">Organisasi</a></li>
+    <li><a href="#semantik">Semantik</a></li>
+  </ul>
+  <div class="theme-toggle" role="group" aria-label="Ganti tema">
+    <button type="button" id="btn-dark" class="active" aria-label="Mode gelap" title="Mode gelap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
+    <button type="button" id="btn-light" aria-label="Mode terang" title="Mode terang">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-floor-grid"></div>
+  <div class="hero-veil"></div>
+
+  <div class="hero-hud tl">
+    <div>STATUS <span style="color:var(--lime)">●</span> ONLINE</div>
+    <div class="dim">NODE :: KENDARI-93232</div>
+  </div>
+  <div class="hero-hud br">
+    <div class="dim">SYS.UPTIME</div>
+    <div>2023 — PRESENT</div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Mahasiswa Ilmu Komputer · Universitas Halu Oleo</div>
+        <h1>
+          <span class="ln1">REYNALDO</span>
+          <span class="ln2 glitch" data-text="DWI SEPTANO BARU">DWI SEPTANO BARU</span>
+        </h1>
+        <p class="hero-id">NIM <span class="val">F1G123053</span><span class="sep">//</span>ANGKATAN <span class="val">2023</span></p>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kendari, Sulawesi Tenggara
+          </div>
+          <div class="hero-stat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+            rseptanobaru@gmail.com
+          </div>
+          <div class="hero-stat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            S1 Ilmu Komputer
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#identitas" class="btn-primary">
+            Akses Profil
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <a href="#semantik" class="btn-ghost">Lihat Schema</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="scan-tag">
+          <span class="dot c"></span><span class="dot m"></span><span class="dot l"></span>
+          <span class="lbl">OPERATOR.IMG</span>
+        </div>
+        <div class="scan-frame">
+          <img src="./profile.jpg" alt="Foto Reynaldo Dwi Septano Baru" loading="eager" />
+          <div class="wash"></div>
+          <div class="grain"></div>
+          <div class="scan-line"></div>
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="corner bl"></span>
+          <span class="corner br"></span>
+        </div>
+        <div class="scan-caption">
+          <span class="ok"><span class="dot"></span>VERIFIED</span>
+          <span>F1G123053</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- IDENTITAS -->
+  <section id="identitas" class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">Identitas Diri</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-bar"><span class="dot c"></span><span class="dot m"></span><span class="dot l"></span><span class="pb-label">identity.dat</span></div>
+      <div class="id-grid">
+        <div class="id-item"><div class="lbl">Nama Lengkap</div><div class="val">Reynaldo Dwi Septano Baru</div></div>
+        <div class="id-item"><div class="lbl">NIM</div><div class="val mono">F1G123053</div></div>
+        <div class="id-item"><div class="lbl">Program Studi</div><div class="val">Ilmu Komputer</div></div>
+        <div class="id-item"><div class="lbl">Universitas</div><div class="val">Universitas Halu Oleo</div></div>
+        <div class="id-item"><div class="lbl">Kota</div><div class="val">Kendari, Sulawesi Tenggara</div></div>
+        <div class="id-item"><div class="lbl">Email</div><div class="val mono" style="font-size:11.5px;">rseptanobaru@gmail.com</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENDIDIKAN -->
+  <section id="pendidikan" class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">Riwayat Pendidikan</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-bar"><span class="dot c"></span><span class="dot m"></span><span class="dot l"></span><span class="pb-label">education.log</span></div>
+      <div class="edu-timeline">
+        <div class="edu-entry">
+          <div class="edu-dot active"></div>
+          <div class="edu-period">2023 — Sekarang</div>
+          <div class="edu-name">Universitas Halu Oleo</div>
+          <div class="edu-detail">S1 Ilmu Komputer · Kendari, Sulawesi Tenggara</div>
+          <span class="edu-tag current">Sedang Berjalan</span>
+        </div>
+        <div class="edu-entry">
+          <div class="edu-dot"></div>
+          <div class="edu-period">Lulus 2023</div>
+          <div class="edu-name">SMA Negeri 4 Kendari</div>
+          <div class="edu-detail">Sekolah Menengah Atas · Kendari, Sulawesi Tenggara</div>
+          <span class="edu-tag grad">Lulus</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILL -->
+  <section id="skill" class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">Daftar Skill</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-bar"><span class="dot c"></span><span class="dot m"></span><span class="dot l"></span><span class="pb-label">skills.cfg</span></div>
+      <div class="skill-group">
+        <div class="skill-group-title">Web Development</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">HTML</span><span class="skill-bar-pct">90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">CSS</span><span class="skill-bar-pct">85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">JavaScript</span><span class="skill-bar-pct">75%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-group" style="margin-top:26px;padding-top:26px;border-top:1px solid var(--line);">
+        <div class="skill-group-title">Programming</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">Python</span><span class="skill-bar-pct">70%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill magenta" data-width="70"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-group" style="margin-top:26px;padding-top:26px;border-top:1px solid var(--line);">
+        <div class="skill-group-title">Productivity</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">Microsoft Office</span><span class="skill-bar-pct">88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill lime" data-width="88"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANISASI -->
+  <section id="organisasi" class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">Organisasi &amp; Keterlibatan</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="org-grid">
+      <div class="org-card esport">
+        <div class="org-icon-wrap esport">🎮</div>
+        <div class="org-badge esport">Esport</div>
+        <div class="org-name">Valorant Esports Team Kendari</div>
+        <div class="org-role">Player &amp; Strategist</div>
+        <div class="org-desc">Tim esport Valorant aktif berkompetisi di turnamen lokal dan regional. Bertanggung jawab sebagai in-game leader dan perancang strategi tim.</div>
+      </div>
+      <div class="org-card trading">
+        <div class="org-icon-wrap trading">📈</div>
+        <div class="org-badge trading">Trading</div>
+        <div class="org-name">Forex Traders Community Kendari</div>
+        <div class="org-role">Trader &amp; Analyst</div>
+        <div class="org-desc">Komunitas trader forex yang rutin melakukan analisis pasar, diskusi strategi trading, dan edukasi keuangan bagi anggota komunitas.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEMANTIK WEB -->
+  <section id="semantik" class="reveal">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <h2 class="sec-title">Relasi Semantik &amp; Schema.org</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="sem-box">
+      <div class="sem-box-title">// Subject – Predicate – Object (SPO)</div>
+      <div class="triple-list">
+        <div class="triple"><div class="t-sub">Reynaldo D.S. Baru</div><div class="t-pre">kuliah di</div><div class="t-obj">Universitas Halu Oleo</div></div>
+        <div class="triple"><div class="t-sub">Reynaldo D.S. Baru</div><div class="t-pre">memiliki skill</div><div class="t-obj">HTML, CSS, JS, Python</div></div>
+        <div class="triple"><div class="t-sub">Reynaldo D.S. Baru</div><div class="t-pre">alumni dari</div><div class="t-obj">SMA Negeri 4 Kendari</div></div>
+        <div class="triple"><div class="t-sub">Reynaldo D.S. Baru</div><div class="t-pre">tergabung dalam</div><div class="t-obj">Valorant Esports Team</div></div>
+        <div class="triple"><div class="t-sub">Reynaldo D.S. Baru</div><div class="t-pre">tergabung dalam</div><div class="t-obj">Forex Traders Community</div></div>
+        <div class="triple"><div class="t-sub">Universitas Halu Oleo</div><div class="t-pre">berlokasi di</div><div class="t-obj">Kendari, Sultra</div></div>
+      </div>
+
+      <div class="code-block">
+        <div class="code-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>JSON-LD · Schema.org · @graph</span></div>
+        <pre><span class="j-punc">{</span>
+  <span class="j-key">"@context"</span><span class="j-punc">:</span> <span class="j-url">"https://schema.org"</span><span class="j-punc">,</span>
+  <span class="j-key">"@type"</span><span class="j-punc">:</span>    <span class="j-type">"Person"</span><span class="j-punc">,</span>
+  <span class="j-key">"name"</span><span class="j-punc">:</span>     <span class="j-str">"Reynaldo Dwi Septano Baru"</span><span class="j-punc">,</span>
+  <span class="j-key">"identifier"</span><span class="j-punc">:</span> <span class="j-str">"F1G123053"</span><span class="j-punc">,</span>
+  <span class="j-key">"memberOf"</span><span class="j-punc">:</span> <span class="j-punc">[</span>
+    <span class="j-punc">{</span> <span class="j-key">"@type"</span><span class="j-punc">:</span> <span class="j-type">"CollegeOrUniversity"</span><span class="j-punc">,</span>
+      <span class="j-key">"name"</span><span class="j-punc">:</span> <span class="j-str">"Universitas Halu Oleo"</span> <span class="j-punc">},</span>
+    <span class="j-punc">{</span> <span class="j-key">"@type"</span><span class="j-punc">:</span> <span class="j-type">"Organization"</span><span class="j-punc">,</span>
+      <span class="j-key">"name"</span><span class="j-punc">:</span> <span class="j-str">"Valorant Esports Team Kendari"</span> <span class="j-punc">}</span>
+  <span class="j-punc">],</span>
+  <span class="j-key">"knowsAbout"</span><span class="j-punc">:</span> <span class="j-punc">[</span>
+    <span class="j-punc">{</span> <span class="j-key">"@type"</span><span class="j-punc">:</span> <span class="j-type">"DefinedTerm"</span><span class="j-punc">,</span> <span class="j-key">"name"</span><span class="j-punc">:</span> <span class="j-str">"HTML"</span> <span class="j-punc">},</span>
+    <span class="j-punc">{</span> <span class="j-key">"@type"</span><span class="j-punc">:</span> <span class="j-type">"DefinedTerm"</span><span class="j-punc">,</span> <span class="j-key">"name"</span><span class="j-punc">:</span> <span class="j-str">"CSS"</span> <span class="j-punc">},</span>
+    <span class="j-punc">{</span> <span class="j-key">"@type"</span><span class="j-punc">:</span> <span class="j-type">"DefinedTerm"</span><span class="j-punc">,</span> <span class="j-key">"name"</span><span class="j-punc">:</span> <span class="j-str">"Python"</span> <span class="j-punc">}</span>
+  <span class="j-punc">]</span>
+<span class="j-punc">}</span></pre>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-left">Dibuat oleh <strong>Reynaldo Dwi Septano Baru</strong> · UAS Semantik Web 2025</div>
+  <div class="footer-links">
+    <a href="https://uho.ac.id" target="_blank" rel="noopener">Universitas Halu Oleo</a>
+    <a href="https://schema.org" target="_blank" rel="noopener">Schema.org</a>
+    <a href="#" target="_blank">Video Presentasi</a>
+  </div>
+  <div class="footer-schema">// schema: Person · CollegeOrUniversity · Organization · DefinedTerm</div>
+</footer>
+
+<script type="importmap">
+{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+</script>
+
+<script>
+  /* ================= THEME ================= */
+  const root = document.documentElement;
+  const btnDark = document.getElementById('btn-dark');
+  const btnLight = document.getElementById('btn-light');
+
+  function setTheme(mode){
+    root.setAttribute('data-theme', mode);
+    btnDark.classList.toggle('active', mode === 'dark');
+    btnLight.classList.toggle('active', mode === 'light');
+    try{ localStorage.setItem('reynaldo-theme', mode); }catch(e){}
+    window.dispatchEvent(new CustomEvent('themechange', { detail: mode }));
+  }
+  let savedTheme = 'dark';
+  try{
+    savedTheme = localStorage.getItem('reynaldo-theme') ||
+      (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  }catch(e){}
+  setTheme(savedTheme);
+  btnDark.addEventListener('click', () => setTheme('dark'));
+  btnLight.addEventListener('click', () => setTheme('light'));
+
+  /* ================= BOOT SEQUENCE ================= */
+  const bootEl = document.getElementById('boot');
+  const bootText = document.getElementById('boot-text');
+  const bootLines = [
+    '> initializing profile.sys ...',
+    '> loading identity F1G123053 ...',
+    '> mounting modules: edu / skill / org ...',
+    '> schema.org graph linked ...',
+    '> ACCESS GRANTED'
+  ];
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function runBoot(){
+    if (prefersReduced){ bootEl.style.display = 'none'; triggerHeroGlitch(); return; }
+    let i = 0;
+    const tick = () => {
+      if (i < bootLines.length){
+        bootText.textContent += bootLines[i] + '\n';
+        i++;
+        setTimeout(tick, 220);
+      } else {
+        setTimeout(() => {
+          bootEl.style.opacity = '0';
+          setTimeout(() => { bootEl.style.display = 'none'; triggerHeroGlitch(); }, 500);
+        }, 280);
+      }
+    };
+    tick();
+  }
+  function triggerHeroGlitch(){
+    const g = document.querySelector('.glitch');
+    if (!g) return;
+    g.classList.add('glitching');
+    setTimeout(() => g.classList.remove('glitching'), 450);
+  }
+  window.addEventListener('load', runBoot);
+
+  /* ================= SCROLL REVEAL ================= */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        e.target.classList.add('visible');
+        e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+<script type="module" src="./hero-scene.js"></script>
+</body>
+</html>

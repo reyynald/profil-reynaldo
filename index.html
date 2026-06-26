@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reynaldo Dwi Septano Baru – Profil Mahasiswa</title>
+
+  <!-- ═══════════════════════════════════════════════
+       JSON-LD SCHEMA.ORG — SEMANTIC WEB DATA
+       Skema: Person + CollegeOrUniversity + DefinedTerm (Skill)
+  ════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://reynaldo-profile.github.io/#person",
+        "name": "Reynaldo Dwi Septano Baru",
+        "givenName": "Reynaldo",
+        "familyName": "Baru",
+        "additionalName": "Dwi Septano",
+        "identifier": "F1G123053",
+        "email": "rseptanobaru@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. H.E.A. Mokodompit, Kec. Kambu",
+          "addressLocality": "Kendari",
+          "addressRegion": "Sulawesi Tenggara",
+          "postalCode": "93232",
+          "addressCountry": "ID"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "@id": "https://schema.org/HighSchool",
+            "name": "SMA Negeri 4 Kendari",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Kendari",
+              "addressCountry": "ID"
+            }
+          }
+        ],
+        "memberOf": {
+          "@type": "CollegeOrUniversity",
+          "@id": "https://uho.ac.id/#organization",
+          "name": "Universitas Halu Oleo",
+          "alternateName": "UHO",
+          "url": "https://uho.ac.id",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kendari",
+            "addressRegion": "Sulawesi Tenggara",
+            "addressCountry": "ID"
+          }
+        },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "S1 Ilmu Komputer",
+          "recognizedBy": {
+            "@id": "https://uho.ac.id/#organization"
+          }
+        },
+        "knowsAbout": [
+          {
+            "@type": "DefinedTerm",
+            "@id": "#skill-html",
+            "name": "HTML",
+            "description": "Hypertext Markup Language – bahasa standar untuk membangun struktur halaman web.",
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "name": "Web Development Skills"
+            }
+          },
+          {
+            "@type": "DefinedTerm",
+            "@id": "#skill-css",
+            "name": "CSS",
+            "description": "Cascading Style Sheets – teknologi untuk mengatur tampilan dan tata letak halaman web.",
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "name": "Web Development Skills"
+            }
+          },
+          {
+            "@type": "DefinedTerm",
+            "@id": "#skill-javascript",
+            "name": "JavaScript",
+            "description": "Bahasa pemrograman tingkat tinggi yang digunakan untuk membuat halaman web interaktif.",
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "name": "Web Development Skills"
+            }
+          },
+          {
+            "@type": "DefinedTerm",
+            "@id": "#skill-python",
+            "name": "Python",
+            "description": "Bahasa pemrograman serbaguna yang populer untuk data science, otomasi, dan pengembangan back-end.",
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "name": "Programming Skills"
+            }
+          },
+          {
+            "@type": "DefinedTerm",
+            "@id": "#skill-msoffice",
+            "name": "Microsoft Office",
+            "description": "Suite aplikasi produktivitas meliputi Word, Excel, dan PowerPoint.",
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "name": "Productivity Tools"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "@id": "https://uho.ac.id/#organization",
+        "name": "Universitas Halu Oleo",
+        "alternateName": "UHO",
+        "url": "https://uho.ac.id",
+        "sameAs": "https://www.wikidata.org/wiki/Q12511643",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. H.E.A. Mokodompit",
+          "addressLocality": "Kendari",
+          "addressRegion": "Sulawesi Tenggara",
+          "postalCode": "93232",
+          "addressCountry": "ID"
+        },
+        "department": {
+          "@type": "EducationalOrganization",
+          "name": "Program Studi Ilmu Komputer",
+          "description": "Program studi jenjang S1 yang mempelajari ilmu komputer, pemrograman, dan teknologi informasi.",
+          "url": "https://uho.ac.id"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:     #0B1120;
+      --navy-mid: #1A2640;
+      --indigo:   #3D52D5;
+      --indigo-lt:#EEF0FD;
+      --cyan:     #0891B2;
+      --cyan-lt:  #E0F5FA;
+      --amber:    #D97706;
+      --amber-lt: #FEF3C7;
+      --green:    #059669;
+      --green-lt: #D1FAE5;
+      --border:   #E2E8F0;
+      --text:     #0F172A;
+      --muted:    #64748B;
+      --surface:  #F8FAFC;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text);
+      background: var(--surface);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-brand {
+      font-weight: 700; font-size: 15px;
+      color: var(--navy);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nav-dot {
+      width: 8px; height: 8px;
+      background: var(--indigo);
+      border-radius: 50%;
+    }
+    .nav-links {
+      display: flex; gap: 28px; list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none; color: var(--muted);
+      font-size: 13.5px; font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--indigo); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 80px 5% 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 40%, rgba(61,82,213,0.25) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(8,145,178,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(61,82,213,0.25);
+      border: 1px solid rgba(61,82,213,0.4);
+      color: #A5B4FC;
+      font-size: 12px; font-weight: 600; letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 4px 12px; border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .hero-tag span { width: 6px; height: 6px; background: #818CF8; border-radius: 50%; }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 800;
+      line-height: 1.18;
+      letter-spacing: -.02em;
+      margin-bottom: 8px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #818CF8 0%, #38BDF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 16px; color: #94A3B8;
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; gap: 20px;
+    }
+    .hero-meta-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: #94A3B8;
+    }
+    .hero-meta-item svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .hero-meta-item strong { color: #E2E8F0; font-weight: 500; }
+    .avatar-ring {
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      border: 3px solid rgba(61,82,213,0.5);
+      background: linear-gradient(135deg, #3D52D5 0%, #0891B2 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 40px; font-weight: 800; color: #fff;
+      flex-shrink: 0;
+      letter-spacing: -2px;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 5% 80px;
+    }
+
+    /* ── SECTION ── */
+    section { margin-top: 56px; }
+    .section-label {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 24px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .label-pill {
+      display: flex; align-items: center; gap: 6px;
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 4px 14px 4px 10px;
+      border-radius: 20px;
+      font-size: 12px; font-weight: 700;
+      color: var(--muted);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .label-pill svg { width: 14px; height: 14px; }
+
+    /* ── CARDS ── */
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      transition: box-shadow .2s;
+    }
+    .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.06); }
+
+    /* ── IDENTITY GRID ── */
+    .identity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+    }
+    .id-field {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .id-field .id-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .id-field .id-value {
+      font-size: 14px; font-weight: 600; color: var(--text);
+    }
+    .id-field .id-value.mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--indigo);
+    }
+
+    /* ── PENDIDIKAN ── */
+    .edu-item {
+      display: flex; align-items: flex-start; gap: 18px;
+    }
+    .edu-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .edu-icon.uni { background: var(--indigo-lt); }
+    .edu-icon.sma { background: var(--cyan-lt); }
+    .edu-icon svg { width: 22px; height: 22px; }
+    .edu-body { flex: 1; }
+    .edu-body h3 { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+    .edu-body p { font-size: 13.5px; color: var(--muted); }
+    .edu-badge {
+      display: inline-block;
+      background: var(--indigo-lt);
+      color: var(--indigo);
+      font-size: 11px; font-weight: 700;
+      padding: 2px 10px; border-radius: 20px;
+      margin-top: 6px;
+    }
+    .edu-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+
+    /* ── SKILL GRID ── */
+    .skill-grid {
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .skill-chip {
+      display: flex; align-items: center; gap: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 13.5px; font-weight: 600;
+      cursor: default;
+      transition: border-color .2s, background .2s;
+    }
+    .skill-chip:hover { border-color: var(--indigo); background: var(--indigo-lt); }
+    .skill-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dot-indigo { background: var(--indigo); }
+    .dot-cyan   { background: var(--cyan); }
+    .dot-amber  { background: var(--amber); }
+
+    /* ── SEMANTIC BOX ── */
+    .semantic-box {
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 28px;
+      color: #E2E8F0;
+    }
+    .semantic-box h3 {
+      font-size: 13px; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase;
+      color: #64748B;
+      margin-bottom: 20px;
+    }
+    .triple-list { display: flex; flex-direction: column; gap: 10px; }
+    .triple {
+      display: flex; align-items: center; gap: 0;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 13px;
+    }
+    .triple-part {
+      padding: 10px 14px;
+      flex: 1;
+    }
+    .triple-part.subject  { color: #818CF8; font-weight: 600; }
+    .triple-part.pred     { color: #94A3B8; font-style: italic; border-left: 1px solid rgba(255,255,255,.07); border-right: 1px solid rgba(255,255,255,.07); flex: 0.8; text-align: center; }
+    .triple-part.object   { color: #38BDF8; font-weight: 600; }
+
+    /* ── JSON-LD PREVIEW ── */
+    .code-block {
+      background: #0F172A;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      overflow-x: auto;
+      margin-top: 20px;
+    }
+    .code-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .code-header span { font-size: 12px; color: #64748B; font-family: 'JetBrains Mono', monospace; }
+    .code-dots { display: flex; gap: 5px; }
+    .code-dots i { width: 10px; height: 10px; border-radius: 50%; }
+    .code-dots i:nth-child(1) { background: #EF4444; }
+    .code-dots i:nth-child(2) { background: #F59E0B; }
+    .code-dots i:nth-child(3) { background: #10B981; }
+    pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      line-height: 1.8;
+      padding: 18px 20px;
+      color: #CBD5E1;
+      margin: 0;
+    }
+    .j-key    { color: #93C5FD; }
+    .j-str    { color: #6EE7B7; }
+    .j-type   { color: #F9A8D4; }
+    .j-url    { color: #FCD34D; }
+    .j-punc   { color: #64748B; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 32px 5%;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    footer a { color: var(--indigo); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .avatar-ring { display: none; }
+      nav { padding: 0 4%; }
+      .nav-links { display: none; }
+      main { padding: 0 4% 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-dot"></div>
+    Reynaldo D.S. Baru
+  </div>
+  <ul class="nav-links">
+    <li><a href="#identitas">Identitas</a></li>
+    <li><a href="#pendidikan">Pendidikan</a></li>
+    <li><a href="#skill">Skill</a></li>
+    <li><a href="#semantik">Semantik Web</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">
+        <span></span>
+        Mahasiswa Ilmu Komputer · UHO
+      </div>
+      <h1>Reynaldo<br><em>Dwi Septano Baru</em></h1>
+      <p class="hero-sub">NIM F1G123053 &nbsp;·&nbsp; Universitas Halu Oleo, Kendari</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <strong>Kendari, Sulawesi Tenggara</strong>
+        </div>
+        <div class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          <strong>rseptanobaru@gmail.com</strong>
+        </div>
+      </div>
+    </div>
+    <div class="avatar-ring">RB</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ── IDENTITAS ── -->
+  <section id="identitas">
+    <div class="section-label">
+      <div class="label-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Identitas Diri
+      </div>
+    </div>
+    <div class="card">
+      <div class="identity-grid">
+        <div class="id-field">
+          <div class="id-label">Nama Lengkap</div>
+          <div class="id-value">Reynaldo Dwi Septano Baru</div>
+        </div>
+        <div class="id-field">
+          <div class="id-label">NIM</div>
+          <div class="id-value mono">F1G123053</div>
+        </div>
+        <div class="id-field">
+          <div class="id-label">Program Studi</div>
+          <div class="id-value">Ilmu Komputer</div>
+        </div>
+        <div class="id-field">
+          <div class="id-label">Universitas</div>
+          <div class="id-value">Universitas Halu Oleo</div>
+        </div>
+        <div class="id-field">
+          <div class="id-label">Kota</div>
+          <div class="id-value">Kendari, Sulawesi Tenggara</div>
+        </div>
+        <div class="id-field">
+          <div class="id-label">Email</div>
+          <div class="id-value mono" style="font-size:12px;">rseptanobaru@gmail.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PENDIDIKAN ── -->
+  <section id="pendidikan">
+    <div class="section-label">
+      <div class="label-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        Riwayat Pendidikan
+      </div>
+    </div>
+    <div class="card">
+      <div class="edu-item">
+        <div class="edu-icon uni">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D52D5" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="edu-body">
+          <h3>Universitas Halu Oleo</h3>
+          <p>Program Studi S1 Ilmu Komputer · Kendari, Sulawesi Tenggara</p>
+          <span class="edu-badge">2023 – Sekarang</span>
+        </div>
+      </div>
+      <hr class="edu-divider" />
+      <div class="edu-item">
+        <div class="edu-icon sma">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="edu-body">
+          <h3>SMA Negeri 4 Kendari</h3>
+          <p>Sekolah Menengah Atas · Kendari, Sulawesi Tenggara</p>
+          <span class="edu-badge" style="background:var(--cyan-lt);color:var(--cyan);">Lulus 2023</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILL ── -->
+  <section id="skill">
+    <div class="section-label">
+      <div class="label-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        Daftar Skill
+      </div>
+    </div>
+    <div class="card">
+      <div style="margin-bottom:16px;">
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Web Development</p>
+        <div class="skill-grid">
+          <div class="skill-chip"><div class="skill-dot dot-indigo"></div>HTML</div>
+          <div class="skill-chip"><div class="skill-dot dot-indigo"></div>CSS</div>
+          <div class="skill-chip"><div class="skill-dot dot-indigo"></div>JavaScript</div>
+        </div>
+      </div>
+      <div style="margin-bottom:16px;">
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Programming</p>
+        <div class="skill-grid">
+          <div class="skill-chip"><div class="skill-dot dot-cyan"></div>Python</div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Productivity</p>
+        <div class="skill-grid">
+          <div class="skill-chip"><div class="skill-dot dot-amber"></div>Microsoft Office</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SEMANTIK WEB ── -->
+  <section id="semantik">
+    <div class="section-label">
+      <div class="label-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        Relasi Semantik &amp; Schema.org
+      </div>
+    </div>
+
+    <div class="semantic-box">
+      <h3>Relasi Semantik (Subject – Predicate – Object)</h3>
+      <div class="triple-list">
+        <div class="triple">
+          <div class="triple-part subject">Reynaldo D.S. Baru</div>
+          <div class="triple-part pred">kuliah di</div>
+          <div class="triple-part object">Universitas Halu Oleo</div>
+        </div>
+        <div class="triple">
+          <div class="triple-part subject">Reynaldo D.S. Baru</div>
+          <div class="triple-part pred">memiliki skill</div>
+          <div class="triple-part object">HTML, CSS, JS, Python</div>
+        </div>
+        <div class="triple">
+          <div class="triple-part subject">Reynaldo D.S. Baru</div>
+          <div class="triple-part pred">alumni dari</div>
+          <div class="triple-part object">SMA Negeri 4 Kendari</div>
+        </div>
+        <div class="triple">
+          <div class="triple-part subject">Universitas Halu Oleo</div>
+          <div class="triple-part pred">berlokasi di</div>
+          <div class="triple-part object">Kendari, Sulawesi Tenggara</div>
+        </div>
+      </div>
+
+      <!-- JSON-LD PREVIEW SNIPPET -->
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><i></i><i></i><i></i></div>
+          <span>JSON-LD · Schema.org · Person</span>
+        </div>
+        <pre><span class="j-punc">{</span>
+  <span class="j-key">"@context"</span><span class="j-punc">:</span> <span class="j-url">"https://schema.org"</span><span class="j-punc">,</span>
+  <span class="j-key">"@type"</span><span class="j-punc">:</span>    <span class="j-type">"Person"</span><span class="j-punc">,</span>
+  <span class="j-key">"name"</span><span class="j-punc">:</span>     <span class="j-str">"Reynaldo Dwi Septano Baru"</span><span class="j-punc">,</span>
+  <span class="j-key">"identifier"</span><span class="j-punc">:</span> <span class="j-str">"F1G123053"</span><span class="j-punc">,</span>
+  <span class="j-key">"memberOf"</span><span class="j-punc">:</span> <span class="j-punc">{</span>
+    <span class="j-key">"@type"</span><span class="j-punc">:</span> <span class="j-type">"CollegeOrUniversity"</span><span class="j-punc">,</span>
+    <span class="j-key">"name"</span><span class="j-punc">:</span>  <span class="j-str">"Universitas Halu Oleo"</span>
+  <span class="j-punc">},</span>
+  <span class="j-key">"knowsAbout"</span><span class="j-punc">:</span> <span class="j-punc">[</span>
+    <span class="j-punc">{</span> <span class="j-key">"@type"</span><span class="j-punc">:</span> <span class="j-type">"DefinedTerm"</span><span class="j-punc">,</span> <span class="j-key">"name"</span><span class="j-punc">:</span> <span class="j-str">"HTML"</span> <span class="j-punc">},</span>
+    <span class="j-punc">{</span> <span class="j-key">"@type"</span><span class="j-punc">:</span> <span class="j-type">"DefinedTerm"</span><span class="j-punc">,</span> <span class="j-key">"name"</span><span class="j-punc">:</span> <span class="j-str">"CSS"</span> <span class="j-punc">},</span>
+    <span class="j-punc">{</span> <span class="j-key">"@type"</span><span class="j-punc">:</span> <span class="j-type">"DefinedTerm"</span><span class="j-punc">,</span> <span class="j-key">"name"</span><span class="j-punc">:</span> <span class="j-str">"JavaScript"</span> <span class="j-punc">},</span>
+    <span class="j-punc">{</span> <span class="j-key">"@type"</span><span class="j-punc">:</span> <span class="j-type">"DefinedTerm"</span><span class="j-punc">,</span> <span class="j-key">"name"</span><span class="j-punc">:</span> <span class="j-str">"Python"</span> <span class="j-punc">}</span>
+  <span class="j-punc">]</span>
+<span class="j-punc">}</span></pre>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Dibuat untuk tugas UAS Mata Kuliah Semantik Web &nbsp;·&nbsp; <a href="https://uho.ac.id" target="_blank" rel="noopener">Universitas Halu Oleo</a></p>
+  <p style="margin-top:6px;font-size:11.5px;">Data terstruktur menggunakan <a href="https://schema.org" target="_blank" rel="noopener">Schema.org</a> · JSON-LD</p>
+</footer>
+
+</body>
+</html>
